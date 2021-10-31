@@ -28,7 +28,7 @@ plt.title('Original Spectrogram')
 plt.show()
 ```
 
-![Original Spectrogram](https://raw.githubusercontent.com/xli2522/TFchirp/blob/master/img/original_spectrogram.png)
+![Original Spectrogram](https://raw.githubusercontent.com/xli2522/TFchirp/main/img/original_spectrogram.png)
 
 Step 3: Quick Inverse S Transform
 
@@ -40,7 +40,7 @@ plt.title('Time Series Reconstruction Error')
 plt.show()
 ```
 
-![Reconstruction Error](https://raw.githubusercontent.com/xli2522/TFchirp/blob/master/img/reconstruction_error.png)
+![Reconstruction Error](https://raw.githubusercontent.com/xli2522/TFchirp/main/img/reconstruction_error.png)
 
 Recovered spectrogram:
 
@@ -52,5 +52,5 @@ plt.title('Recovered Specctrogram')
 plt.show()
 ```
 
-![Recovered](https://raw.githubusercontent.com/xli2522/TFchirp/blob/master/img/recovered_spectrogram.png)
+![Recovered](https://raw.githubusercontent.com/xli2522/TFchirp/main/img/recovered_spectrogram.png)
 
