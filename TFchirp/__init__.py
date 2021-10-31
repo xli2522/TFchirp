@@ -33,8 +33,7 @@ def sTransform(ts, sample_rate, frange=[0, 800], frate = 1):
     '''
 
     length = len(ts)               
-    Nfreq = [int(frange[0]*length/sample_rate), int(frange[1]*length/sample_rate)]     
-    print(Nfreq)        
+    Nfreq = [int(frange[0]*length/sample_rate), int(frange[1]*length/sample_rate)]      
     tsVal = np.copy(ts)            
     amp = np.zeros((int((Nfreq[1]-Nfreq[0])/frate)+1,length), dtype='c8')              
     tsFFT = np.fft.fft(tsVal)               
