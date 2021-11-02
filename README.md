@@ -30,10 +30,10 @@ plt.show()
 
 ![Original Spectrogram](https://raw.githubusercontent.com/xli2522/TFchirp/main/img/original_spectrogram.png)
 
-Step 3: Quick Inverse S Transform
+Step 3: Quick Recovery of ts from sTransform Spectrogram
 
 ```Python
-# Quick Inverse S Transform
+# Quick ts Recovery from sTransform
 inverse_ts = TFchirp.inverse_S(spectrogram)
 plt.plot(inverse_ts-data)
 plt.title('Time Series Reconstruction Error')
