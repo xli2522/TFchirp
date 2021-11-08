@@ -21,10 +21,10 @@ data = scipy.signal.chirp(ts, 10, 1, 120, method='quadratic')
 Step 2: S Transform Spectrogram
 
 ```Python
-from s import *
+import TFchirp
 
 # Compute S Transform Spectrogram
-spectrogram = sTransform(data, sample_rate=rate)
+spectrogram = TFchirp.sTransform(data, sample_rate=rate)
 plt.imshow(abs(spectrogram), origin='lower', aspect='auto')
 plt.title('Original Spectrogram')
 plt.show()
@@ -38,7 +38,7 @@ Step 3: Quick recovery of full ts from S transform * 0 frequency row*
 
 ```Python
 # Quick Recovery of ts from S Transform 0 frequency row
-recovered_ts = recoverS(spectrogram)
+recovered_ts = TFchirp.recoverS(spectrogram)
 plt.plot(recovered_ts-data)
 plt.title('Time Series Reconstruction Error')
 plt.show()
@@ -50,7 +50,7 @@ Step 4: Recovered spectrogram:
 
 ```Python
 # Compute S Transform Spectrogram on the recovered time series
-recoveredSpectrogram = sTransform(recovered_ts, sample_rate=rate, frange=[0,500])
+recoveredSpectrogram = TFchirp.sTransform(recovered_ts, sample_rate=rate, frange=[0,500])
 plt.imshow(abs(recoveredSpectrogram), origin='lower', aspect='auto')
 plt.title('Recovered Specctrogram')
 plt.show()
@@ -62,7 +62,7 @@ Step 5: The real inverse S transform
 
 ```python
 # Quick Inverse of ts from S Transform
-inverse_ts, inverse_tsFFT = inverseS(spectrogram)
+inverse_ts, inverse_tsFFT = TFchirp.inverseS(spectrogram)
 plt.plot(inverse_ts)
 plt.plot(inverse_ts-data)
 plt.title('Time Series Reconstruction Error')
@@ -76,7 +76,7 @@ Step 6: Recovered spectrogram on the *real* inverse S transform ts
 
 ```python
 # Compute S Transform Spectrogram on the recovered time series
-inverseSpectrogram = sTransform(inverse_ts, sample_rate=rate, frange=[0,500])
+inverseSpectrogram = TFchirp.sTransform(inverse_ts, sample_rate=rate, frange=[0,500])
 plt.imshow(abs(inverseSpectrogram), origin='lower', aspect='auto')
 plt.title('Recovered Specctrogram')
 plt.show()
