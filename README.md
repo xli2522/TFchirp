@@ -1,4 +1,4 @@
-[![PyPI version](https://badge.fury.io/py/TFchirp.svg)](https://badge.fury.io/py/TFchirp)
+[![PyPI version](https://badge.fury.io/py/TFchirp.svg)](https://badge.fury.io/py/TFchirp) [![Downloads](https://pepy.tech/badge/tfchirp)](https://pepy.tech/project/tfchirp) [![Downloads](https://pepy.tech/badge/tfchirp/month)](https://pepy.tech/project/tfchirp)
 
 ## Time Frequency Transform for Chirp Signals
 
